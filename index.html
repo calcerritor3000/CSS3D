@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3D - Pipeline RAG + IA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pipeline RAG + IA en 3D</h1>
+      <div class="controls">
+        <button type="button" id="pauseBtn">Pausar</button>
+        <button type="button" id="speedBtn">Velocidad x2</button>
+      </div>
+    </header>
+
+    <main class="scene" aria-label="Carrusel 3D del flujo RAG">
+      <section class="ring" id="ring">
+        <article class="panel p1" data-step="1">1. Documento</article>
+        <article class="panel p2" data-step="2">2. Embeddings</article>
+        <article class="panel p3" data-step="3">3. ChromaDB</article>
+        <article class="panel p4" data-step="4">4. Query</article>
+        <article class="panel p5" data-step="5">5. Chunks raw</article>
+        <article class="panel p6" data-step="6">6. IA responde</article>
+      </section>
+    </main>
+
+    <p id="info">Haz clic en un panel para ver la etapa del flujo RAG + IA.</p>
+
+    <aside class="leyenda">
+      <strong>Flujo:</strong> El texto se divide en trozos → se convierten en vectores →
+      se guardan en ChromaDB → una pregunta busca los chunks más similares →
+      la IA los transforma en respuesta humana.
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
